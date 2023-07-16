@@ -1,0 +1,117 @@
+<mxfile host="Electron" modified="2023-06-13T03:16:03.989Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.3.7 Chrome/112.0.5615.204 Electron/24.5.0 Safari/537.36" etag="8iivmQxmfEMl3HCEDSho" version="21.3.7" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1129" dy="1963" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="RnjdCSh1LebONNFmuyf_-4" value="" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Ks448k2UZnPWexqxVo--1" target="RnjdCSh1LebONNFmuyf_-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="20" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Ks448k2UZnPWexqxVo--1" value="Start" style="strokeWidth=3;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="364" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="RnjdCSh1LebONNFmuyf_-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="140" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-2" target="RnjdCSh1LebONNFmuyf_-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-2" value="Run system1, activate QR code scanner" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="180" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-5" target="RnjdCSh1LebONNFmuyf_-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-5" target="RnjdCSh1LebONNFmuyf_-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-5" value="Read QR code, get Student ID" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="175" y="235" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-7" target="RnjdCSh1LebONNFmuyf_-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-7" value="Access anonymized Audio file based on Student ID by reverse encoding" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="137.5" y="370" width="205" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-9" target="RnjdCSh1LebONNFmuyf_-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-9" value="Access the Google cloud storage API" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="170" y="485" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-11" target="RnjdCSh1LebONNFmuyf_-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-11" value="Get the Audio file" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="180" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-15" value="Play&lt;br style=&quot;font-size: 13px;&quot;&gt;Audio file" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=13;rounded=1;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="180" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-17" target="RnjdCSh1LebONNFmuyf_-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-17" value="Access Firebase API, Send Student ID as Message" style="whiteSpace=wrap;html=1;fontSize=13;rounded=1;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="346" y="235" width="136" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-21" target="RnjdCSh1LebONNFmuyf_-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-21" value="Run system2, activate camera" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="520" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-26" value="" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6Ks448k2UZnPWexqxVo--1" target="RnjdCSh1LebONNFmuyf_-21" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="10" as="sourcePoint" />
+            <mxPoint x="240" y="100" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="580" y="60" />
+              <mxPoint x="580" y="40" />
+              <mxPoint x="550" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-27" target="RnjdCSh1LebONNFmuyf_-30" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-27" target="RnjdCSh1LebONNFmuyf_-41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-27" value="Is this a new message?" style="rhombus;whiteSpace=wrap;html=1;fontSize=13;rounded=1;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="520" y="220" width="120" height="97.5" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-30" target="RnjdCSh1LebONNFmuyf_-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-30" value="Access bigquery API" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="520" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RnjdCSh1LebONNFmuyf_-32" target="RnjdCSh1LebONNFmuyf_-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-32" value="Based on Student ID access data" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="515" y="485" width="130" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-36" value="Print banner on Display containing student data" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=13;rounded=1;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="482" y="600" width="195" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-38" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="585" y="320" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-41" value="Keep displaying &lt;br style=&quot;font-size: 13px;&quot;&gt;previous Student ID&lt;br style=&quot;font-size: 13px;&quot;&gt;related student data" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=13;rounded=1;strokeWidth=3;fontStyle=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="700" y="230" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RnjdCSh1LebONNFmuyf_-43" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;strokeWidth=3;fontSize=13;fontStyle=1" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="640" y="238" width="40" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

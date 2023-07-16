@@ -115,6 +115,8 @@ class Anonymized_audio:
         print("Transmitted value is:\t", final_val)
         return final_val
 
+
+    
     def upload_audio_to_gcs(self, response, bucket_name, audio_folder, output_file):
         file_details = response['answers']['19eca6e5']['fileUploadAnswers']['answers'][0]
         file_id = file_details['fileId']
@@ -127,7 +129,15 @@ class Anonymized_audio:
 
         if not output_file.endswith('.mp3'):
             output_file = os.path.splitext(output_file)[0] + '.mp3'
-
+        
+        # Normalize the audio at specific loudness. 
+        def match_target_amplitude(sound, target_dBFS):
+            change_in_dBFS = target_dBFS - sound.dBFS
+            return sound.apply_gain(change_in_dBFS)
+        
+        # Normalize the audio
+        normalized_sound = match_target_amplitude(sound, -20.0) 
+        
         # Upload the audio file directly to GCS
         storage_client = storage.Client.from_service_account_json(self.credentials_path)
         bucket = storage_client.get_bucket(bucket_name)

@@ -70,4 +70,5 @@ audio_folder = 'audio_files'
 for response in responses['responses']:
     umid = response['answers']['0e0e5a68']['textAnswers']['answers'][0]['value']
     output_file = audio_processor.anonymize_umid(umid)
+    print(output_file)
     audio_processor.upload_audio_to_gcs(response, bucket_name, audio_folder, output_file)
