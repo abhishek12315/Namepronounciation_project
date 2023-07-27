@@ -12,7 +12,7 @@
 3. Improved the structure of project. 
 
 ## Folder structure - 
-'''
+```
 Version*/
 |-- improved_QRcode_read.py (QR code scan and Audio play)
 |-- Name_Display_banner_final.py (Printing students Information on live feed)
@@ -41,7 +41,7 @@ Version*/
 |   |-- Banner.JPG
 |   |-- Frame.PNG
 |   |-- logo.JPG
-'''
+```
 
 ## Project Objective - 
 1.	The graduation ceremony is an important event that marks the culmination of years of hard work and academic achievements for students. It is a time of celebration and recognition, where students eagerly wait to have their names called out and walk across the stage to receive their diplomas. However, amidst the excitement and anticipation, mispronunciations of names can sometimes occur, leading to moments of embarrassment and frustration.
@@ -60,7 +60,7 @@ Description of proposed solution using Flowchart:
 The student's name, major, and school-related text information are stored in a BigQuery database in tabular format. Similarly, if data related to the same student Id (Unique Identifier) is available, it is replaced with the most recent data.
 
 Once a QR code is generated, it is stored in cloud storage, and an email is sent to the corresponding students at their respective email addresses.
- ![Alt text](image-1.png)
+ ![Alt text]()
  
 3.	On spot form: The On-spot form, GUI window for form is rendered which collects the necessary student data. This data is initially stored in variables, and Google's text-to-speech API is utilized to generate an AI voice based on the dialect and language. After anonymization and normalization, the audio file is saved in mp3 format and stored in Google Storage.
 
