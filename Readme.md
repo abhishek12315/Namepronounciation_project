@@ -1,17 +1,18 @@
-Initial version - 
+## Initial version - 
 1. Explained below
 
-Version2 - Specific changes:
+## Version2 - Specific changes:
 1. Integrated with Namecoach API
 2. Instead of GCP stored everything locally
 3. Used Excel sheets instead of Google form
 
-Version3 - Specific changes:
+## Version3 - Specific changes:
 1. Synchronization with multiple camera scanners. 
 2. Audio played at the Video processing computer. 
 3. Improved the structure of project. 
 
-Folder structure - 
+## Folder structure - 
+'''
 Version*/
 |-- improved_QRcode_read.py (QR code scan and Audio play)
 |-- Name_Display_banner_final.py (Printing students Information on live feed)
@@ -40,15 +41,16 @@ Version*/
 |   |-- Banner.JPG
 |   |-- Frame.PNG
 |   |-- logo.JPG
+'''
 
-Project Objective - 
+## Project Objective - 
 1.	The graduation ceremony is an important event that marks the culmination of years of hard work and academic achievements for students. It is a time of celebration and recognition, where students eagerly wait to have their names called out and walk across the stage to receive their diplomas. However, amidst the excitement and anticipation, mispronunciations of names can sometimes occur, leading to moments of embarrassment and frustration.
  
 2.	Mispronunciations at graduation ceremonies can happen for various reasons. Firstly, the sheer number of graduates can pose a challenge for the individuals announcing the names. With hundreds or even thousands of students graduating, it becomes a daunting task to accurately pronounce every single name correctly. This can be especially challenging for names that are unique or have unconventional spellings, as they may not be familiar to the announcer. Another factor contributing to mispronunciations is the diversity of student populations. Graduation ceremonies often include students from different cultural backgrounds, each with their own distinct names and pronunciations. While efforts are made to gather correct pronunciation information, it is not always possible to obtain accurate details for every student. As a result, mistakes can occur despite the best intentions of the organizers. Mispronunciations can have a significant impact on students' experiences during the graduation ceremony. For many, this event represents the pinnacle of their academic journey, and having their names mispronounced can feel disheartening and diminish the sense of personal accomplishment. 
 
 3.	To elevate the students' graduation ceremony experience, we have an innovative proposal for enhancing the ceremony through the implementation of a personalized audio system. This system will allow students to create unique audio files, adding a truly individualized touch to their special moments. Moreover, our software will seamlessly integrate with the live feed camera, providing an enriched visual aspect to the ceremony. By combining both visual and informational elements, we aim to create a truly remarkable experience for all attendees. In addition to capturing the moment when each student receives their degree, the camera feed will showcase essential student information, including their name, school details, and major. This comprehensive integration ensures that every attendee can fully recognize and celebrate each student's achievements. By merging the excitement of the moment with the necessary details, we will craft a captivating and engaging experience for all, making the graduation ceremony a truly memorable event for everyone involved.
 
-Initial Version explained: 
+# Initial Version explained: 
 Description of proposed solution using Flowchart:
 1.	Working of Project: In the flowchart provided, both systems initiate their operation simultaneously. The first system scans the QR code to retrieve the student ID and plays the corresponding audio file. Additionally, it shares the student ID with the second system through the Firebase API. The second system then retrieves the student's information from Google Cloud and displays it on the live feed. In the meantime, if no QR code is scanned it continues to display the last scanned QR code-related student data. 
 ![Alt text](image.png)
