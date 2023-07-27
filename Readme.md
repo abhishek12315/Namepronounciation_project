@@ -67,4 +67,4 @@ Once a QR code is generated, it is stored in cloud storage, and an email is sent
 The data collected through the form is stored in the same BigQuery database used for preprocessing. If any existing data matches the student ID, it is replaced with the data received from this form.
 
 A QR code is created, uploaded to Google Storage, and then sent to the student's email address.
-![Alt text](https://github.com/abhishek12315/Namepronounciation_project/blob/master/Flowchart/onspot.jpg)
+![Alt text](./Flowchart/onspot.jpg)
