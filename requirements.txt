@@ -1,18 +1,18 @@
-pip install google-cloud-storage
-pip install google-cloud-bigquery
-pip install pyqrcode
-pip install Pillow==9.5.0
-pip install pydub
-pip install google-api-python-client
-pip install opencv-python
-pip install pygame
-pip install pyzbar
-pip install numpy
-pip install google-cloud-storage
-pip install google-cloud-firestore
-pip install firebase-admin
-pip install qrcode
-pip install openpyxl
+google-cloud-storage
+google-cloud-bigquery
+pyqrcode
+Pillow==9.5.0
+pydub
+google-api-python-client
+opencv-python
+pygame
+pyzbar
+numpy
+google-cloud-storage
+google-cloud-firestore
+firebase-admin
+qrcode
+openpyxl
 
 % download ffmpeg and add path to the env. 
 % download vcredist_x64.exe first and install. Then "pip install pyzbar" if it give you the error
