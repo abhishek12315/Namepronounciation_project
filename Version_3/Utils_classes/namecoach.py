@@ -52,10 +52,13 @@ class namecoachapi():
       }
 
       response = requests.get(url, headers=requestHeaders)
-      student_details = json.loads(response.text)
-      # print(student_details)
-
-      recording_link = student_details["participant"]["recording_link"]
+      if response.status_code == 200:
+        student_details = json.loads(response.text)
+        #print(student_details)
+        recording_link = student_details["participant"]["recording_link"]
+      else:
+          return None
+      
       if recording_link is None:
           return None    # Write something to handle return condition later
 

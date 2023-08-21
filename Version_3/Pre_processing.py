@@ -1,37 +1,30 @@
+from Utils_classes.namecoach import namecoachapi
+from Utils_classes.audio_processing import Anonymized_audio
+from Utils_classes.email_qrcode import QRCodeUploader
 import io
 import pandas as pd
 import numpy as np
 import json
 import os
 
-student_data = pd.read_excel(os.path.join(os.path.dirname(__file__), "./JSONs/Student_info.xlsx"))
-email_addresses = np.array(student_data.loc[:,"email address"])
-umids = np.array(student_data.loc[:,"UMID"])
+student_data = pd.read_excel(os.path.join(os.path.dirname(__file__), "./JSONs/Student_info.xlsx"), dtype={"UMID": str}, header=0)
+# student_data = pd.read_excel(os.path.join(os.path.dirname(__file__), "./JSONs/graduate_students_1.xlsx"), dtype={"UMID": str}, header=0, skipfooter=1)
+
+student_data.dropna(subset=["Email", "UMID"], inplace=True)
+email_addresses = np.array(student_data.loc[:, "Email"])
+umids = np.array(student_data.loc[:, "UMID"])
 
 
-from Utils_classes.email_qrcode import QRCodeUploader
 # Create an instance of the QRCodeUploader class
 qr_uploader = QRCodeUploader()
 
-for umid, email in zip(umids, email_addresses):
-    qr_img = qr_uploader.generate_qr_code(umid)
-
-    # Create an in-memory file-like object to store the converted image data
-    image_buffer = io.BytesIO()
-    qr_img.save(image_buffer, format='JPEG')
-    image_data = image_buffer.getvalue()
-    
-    qr_uploader.send_email(email, image_data)
-    
-#%%
-
-from Utils_classes.audio_processing import Anonymized_audio
-from Utils_classes.namecoach import namecoachapi
-#Create an instance of Anonymized_audio class
+# Create an instance of Anonymized_audio class
 audio_processor = Anonymized_audio()
 audiofilesaccess = namecoachapi()
+
 # Path to the JSON file
-json_file_path = os.path.join(os.path.dirname(__file__), "./JSONs/No_Audio_file.json")
+json_file_path = os.path.join(os.path.dirname(
+    __file__), "./JSONs/No_Audio_file.json")
 
 # Load existing email addresses from the JSON file
 with open(json_file_path, 'r') as file:
@@ -41,18 +34,78 @@ with open(json_file_path, 'r') as file:
     else:
         No_Audio_file_students = []
 
+# Initialize an empty list to store data
+data_list = []
+
 for umid, email in zip(umids, email_addresses):
-    output_file = audio_processor.anonymize_umid(umid)
     sound = audiofilesaccess.access_audio_files(email)
     if sound is None:
         if email in No_Audio_file_students:
-            print(f"Following student with email address {email} did not uploaded the audio file")
-        else: 
+            print(
+                f"Following student with email address {email} did not uploaded the audio file")
+        else:
             No_Audio_file_students.append(email)
             with open(json_file_path, "w") as file:
-                json.dump(No_Audio_file_students, file)  
+                json.dump(No_Audio_file_students, file)
         continue
+    else:
+        output_file = audio_processor.anonymize_umid(umid)
+        # Locate the row based on the target cell value
+        row = student_data.loc[student_data['UMID'] == umid]
+
+        # Access the entire row
+        selected_row = student_data.loc[row.index]
+        # Last_Name = selected_row.at[row.index[0], 'Last Name']
+        # First_Name = selected_row.at[row.index[0], 'First Name']
+        # Full_Name = f"{str(First_Name)} {str(Last_Name)}"
+        Full_Name = selected_row.at[row.index[0], 'Full name']
+        Phonetics = selected_row.at[row.index[0], 'Phonetics']
+        # College = selected_row.at[row.index[0], 'College']
+        # # Level = selected_row.at[row.index[0], 'Level']
+        # # Degree = selected_row.at[row.index[0], 'Degree']
+        # Major = selected_row.at[row.index[0], 'Major']
+
+        # Create a DataFrame
+        # data_list.append({
+        #     'UMID': str(umid),
+        #     'Full_Name': Full_Name,
+        #     'Email': email,
+        #     'College': College,
+        #     'Major': f"{Degree}, {Major}"
+        # })
+        
+
+
+        qr_img = qr_uploader.generate_qr_code(Full_Name, umid)
+        phon_image = qr_uploader.generate_phonetics(Full_Name, Phonetics, umid)
+
+        # Create an in-memory file-like object to store the converted image data
+        #image_buffer = io.BytesIO()
+        
+
+        # Save it locally for temp.
+        local_path = os.path.join(os.path.dirname(__file__), f"./PDF_generation/QR_Codes/{umid}.jpg")
+        local_path_phonetics = os.path.join(os.path.dirname(__file__), f"./PDF_generation/Phonetics/{umid}.jpg")
+        # Save the QR code image locally
+        qr_img.save(local_path, format='JPEG')
+        # Save the phonetics image
+        phon_image.save(local_path_phonetics, format='JPEG')
+
+        # Read the saved image data
+        with open(local_path, "rb") as image_file:
+            image_data = image_file.read()
+        
+
+        # qr_img.save(image_buffer, format='JPEG')
+        # image_data = image_buffer.getvalue()
+        # qr_uploader.send_email(email, image_data)
 
     # Store it locally now.
     path_to_store = os.path.join(os.path.dirname(__file__), "./Anonymized_audios/")
     audio_processor.upload_audio_locally(output_file, sound, path_to_store)
+
+# df = pd.DataFrame(data_list)
+
+# # Write DataFrame to Excel
+# excel_file = os.path.join(os.path.dirname(__file__), './JSONs/output.xlsx')
+# df.to_excel(excel_file, index=False)

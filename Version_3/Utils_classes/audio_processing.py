@@ -109,7 +109,7 @@ class Anonymized_audio:
 
         res = divide(val3, val2)
         final_val = val1 + res
-        print("Transmitted value is:\t", final_val)
+        # print("Transmitted value is:\t", final_val)
         return final_val
     
     def upload_audio_locally(self, output_file, sound, audio_folder):

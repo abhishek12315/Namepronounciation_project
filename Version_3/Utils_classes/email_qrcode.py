@@ -1,5 +1,5 @@
 import qrcode
-from PIL import ImageDraw, ImageFont
+from PIL import ImageDraw, ImageFont, Image
 import os
 import json
 from email.mime.multipart import MIMEMultipart
@@ -25,19 +25,38 @@ class QRCodeUploader:
     def __init__(self):
         self.credentials_path = None
 
-    def generate_qr_code(self, umid):
-        qr = qrcode.QRCode(version=1, box_size=10, border=4)
+    def generate_qr_code(self, Name, umid):
+        qr = qrcode.QRCode(version=1, box_size=48, border=4)
         qr.add_data(umid)
         qr.make(fit=True)
         img = qr.make_image(fill_color="black", back_color="white").convert('RGB')
         qr_width, qr_height = img.size
         draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype("arial.ttf", 18)
-        label_text = "Scan Me!!"
+        font = ImageFont.truetype("arialbd.ttf", 100)
+        label_text = f"Scan Me!!"
         label_width, label_height = draw.textsize(label_text, font=font)
         label_position = ((qr_width - label_width) // 2, qr_height - label_height - 10)
         draw.text(label_position, label_text, font=font, fill="black")
+        img = img.resize((1200, 1500), Image.ANTIALIAS)
         return img
+    
+    def generate_phonetics(self, Full_Name, Phonetics, umid):
+        # Create a new image with white background
+        width, height = 1200, 1350
+        phon_image = Image.new('RGB', (width, height), 'white')
+           
+           # Load a font
+        font = ImageFont.truetype("arialbd.ttf", 72)  # You can specify a different font if needed
+           
+           # Draw the Full_Name on the image
+        draw = ImageDraw.Draw(phon_image)
+        name_position = ((width - draw.textlength(Full_Name, font)) / 2, 675)
+        draw.text(name_position, Full_Name, fill='black', font=font)
+           
+           # Draw the phonetics below Full_Name
+        phonetics_position = ((width - draw.textlength(Phonetics, font)) / 2, 775)
+        draw.text(phonetics_position, Phonetics, fill='black', font=font)
+        return phon_image
 
         
     def send_email(self, email, img):
