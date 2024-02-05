@@ -18,7 +18,7 @@
 
 ## Version 5 - 
 1. Removed python based scanning, improved the JS code, and involved the synchronization by jumping between HTML pages.
-2. Improved the banner of the video by using Nanuto sans font.
+2. Improved the banner of the video by using Nunito sans font.
 3. Implemented green screen instead of the camera using Open CV. Improved the namedisplay.py code. 
 4. Simplified Utils_classes.
 
