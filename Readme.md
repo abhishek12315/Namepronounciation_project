@@ -91,3 +91,7 @@ The data collected through the form is stored in the same BigQuery database used
 
 A QR code is created, uploaded to Google Storage, and then sent to the student's email address.
 ![Alt text](./Flowchart/onspot.jpg)
+
+
+# Version 8 explained: Commencement Ceremony
+We are working on it once done we will upload. 
