@@ -144,7 +144,7 @@ while True:
 
             # Access the entire row
             selected_row = student_data.loc[row.index]
-            Name = selected_row.at[row.index[0], 'Full name']
+            Name = selected_row.at[row.index[0], 'Diploma Name']
             # College = selected_row.at[row.index[0], 'College']
             # Major = selected_row.at[row.index[0], 'Major']
 

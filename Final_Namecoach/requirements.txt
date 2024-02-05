@@ -1,0 +1,31 @@
+google-cloud-storage
+google-cloud-bigquery
+pyqrcode
+Pillow==9.5.0
+pydub
+google-api-python-client
+opencv-python
+pygame
+pyzbar
+numpy
+google-cloud-storage
+google-cloud-firestore
+firebase-admin
+qrcode
+openpyxl
+
+% download ffmpeg and add path to the env. 
+% download vcredist_x64.exe first and install. Then "pip install pyzbar" if it give you the error
+
+
+% How to install Nunito sans. 
+To add a font from an online source
+Download the font file, and make sure the file is a True Type (.ttf) or OpenType (.otf) file.
+
+If the file is compressed into a .zip file, right-click it and select Extract to extract the files.
+
+Right-click the font file, and then select Install.
+
+To install for all PC users, select Install for all users (Windows 10, version 1809 or greater).
+
+If you’re asked to allow the program to make changes to your computer, make sure you trust the source of the downloaded file, and then select Yes.

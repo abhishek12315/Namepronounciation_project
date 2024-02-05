@@ -60,7 +60,7 @@ for umid, email in zip(umids, email_addresses):
         # Last_Name = selected_row.at[row.index[0], 'Last Name']
         # First_Name = selected_row.at[row.index[0], 'First Name']
         # Full_Name = f"{str(First_Name)} {str(Last_Name)}"
-        Full_Name = selected_row.at[row.index[0], 'Full name']
+        Full_Name = selected_row.at[row.index[0], 'Diploma Name']
         Phonetics = selected_row.at[row.index[0], 'Phonetics']
         # College = selected_row.at[row.index[0], 'College']
         # # Level = selected_row.at[row.index[0], 'Level']
@@ -94,8 +94,8 @@ for umid, email in zip(umids, email_addresses):
         phon_image.save(local_path_phonetics, format='JPEG')
 
         # Read the saved image data
-        with open(local_path, "rb") as image_file:
-            image_data = image_file.read()
+        # with open(local_path, "rb") as image_file:
+        #     image_data = image_file.read()
         
 
         # qr_img.save(image_buffer, format='JPEG')
