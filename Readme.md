@@ -1,12 +1,12 @@
 ## Initial version - 
 1. Explained below
 
-## Version2 - Specific changes:
+## Version2 - 
 1. Integrated with Namecoach API
 2. Instead of GCP stored everything locally
 3. Used Excel sheets instead of Google form
 
-## Version3 - Specific changes:
+## Version3 - 
 1. Synchronization with multiple camera scanners. 
 2. Audio and Video processed using parallel computations - Threading. 
 3. Improved the structure of project.
