@@ -8,8 +8,28 @@
 
 ## Version3 - Specific changes:
 1. Synchronization with multiple camera scanners. 
-2. Audio played at the Video processing computer. 
-3. Improved the structure of project. 
+2. Audio and Video processed using parallel computations - Threading. 
+3. Improved the structure of project.
+
+## Version 4 - 
+1. Tried with HTML based static webpages to scan it.
+2. Kept the same code for the video display.
+3. Used HEX based simplified ananomyzation of the audio file names based on secret key. 
+
+## Version 5 - 
+1. Removed python based scanning, improved the JS code, and involved the synchronization by jumping between HTML pages.
+2. Improved the banner of the video by using Nanuto sans font.
+3. Implemented green screen instead of the camera using Open CV. Improved the namedisplay.py code. 
+4. Simplified Utils_classes.
+
+## Version 6 - 
+1. Separated the process of the QR code generation and Audio processing, making the preprocessing.py outdated.
+2. Improved the QR codes printed the Name and phonetics on the same side. Created a separate code that will do that.
+3. Got output_chunks as audio files that are split and anonymized.
+
+## Version 8 - 
+1. Final winter commencement version abstracted from version 6.
+2. Removed the unnecessary files. 
 
 ## Folder structure - 
 ```
